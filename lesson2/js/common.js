@@ -2,7 +2,7 @@ document.getElementById('send').onclick = function(){
 	sendForm();
 }
 function sendForm() {
-var xhr = new XMLHttpRequest();
+	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'php/validator.php', true);
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4 && xhr.status == 200){
@@ -18,9 +18,8 @@ var xhr = new XMLHttpRequest();
 	var	credit_card = 'credit_card=' + document.getElementById('credit_card').value;
 	var bio     	= 'bio=' + document.getElementById('bio').value;
 	var birth		= 'birth=' + document.getElementById('birth').value;
-var poster = username + '&' + password + '&' + email +'&' + gender + '&' + credit_card + '&' + bio + '&' + birth;
-console.log(poster);
-poster = JSON.stringify(poster);
+	var poster = username + '&' + password + '&' + email +'&' + gender + '&' + credit_card + '&' + bio + '&' + birth;
+	console.log(poster);
+//poster = JSON.stringify(poster);
 xhr.send(poster);
-console.log(poster);
 }
