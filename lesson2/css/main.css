@@ -59,6 +59,119 @@ body {
 	font-family: "RobotoRegular", sans-serif;
 	overflow-x: hidden;
 }
-.hidden {
+ /*.contact_form{
+	width: 350px;
+}*/
+ .contact_form li{
+ 	padding-right: 10px;
+ 	list-style: none;
+  font-size: 12px;
+  font-family: "Roboto";
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+ }
+ .contact_form label{
+	margin-top: 34px;
+ }
+ .contact_form input, .contact_form textarea, .contact_form select{
+ 	resize: none;
+ 	padding: 6px 18px;
+ 	width: 250px;
+ 	border: 1px solid #efefef;
+    font-size: 12px;
+    font-family: "Roboto";
+    color: rgb(70, 70, 70);
+ }
+ .contact_form button{
+ 	display: block;
+ 	position: relative;
+ 	overflow: hidden;
+ 	border: none;
+ 	margin: 15px 0;
+ 	background-color: #faef03;
+ 	width: 150px;
+ 	height: 50px;
+ 	color: #000;
+ 	font-size: 14px;
+ 	font-weight: 900;
+ 	text-transform: uppercase;
+ 	transition: all 0.2s ease-out;
+ }
+ .contact_form button:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:60%;
+    height:100%;
+    background:rgba(255, 255, 255,0.3);
+    transform:skew(-45deg);
+    transition:all 0.2s ease;
+}
+.loading:before{
+	animation: load 0.7s infinite ease-in-out;
+}
+@keyframes load{
+	1% {left: -90%;
+	    background:rgba(255, 255, 255,0.9);}
+    100% {left: 110%;}
+}
+.contact_form button:hover:before{
+	left:-16%;
+}
+.invalid+.error{
+	display: inline-block;
+}
+.invalid+.error>.active{
+	display: inline-block;
+}
+.error div{
 	display: none;
 }
+.error{
+	position: relative;
+	font-size: 15px;
+	display: none;
+	background-color: #f11;
+	color: #fff;
+	padding: 0px 15px;
+	margin-left: 15px;
+}
+.error:before{
+	content: '';
+	border: 12px solid transparent;
+	border-right-color: red;
+	position: absolute;
+	left: -24px;
+}
+.error i{
+	display: none;
+	padding: 0 15px;
+	font-size: 25px;
+	font-weight: 700;
+	border: 2px solid #fff;
+	border-radius: 30px;
+}
+.successWindow{
+	position: absolute;
+	top: 25vh;
+	left: 25vw;
+	background-color: #fff;
+	margin: auto;
+	padding: 50px 50px 0;
+	text-align: center;
+	width: 500px;
+	height: 250px;
+	border: 1px solid #666;
+	font-size: 25px;
+	box-shadow: 0px 2px 15px -5px black;
+}
+.hiddenWindow{
+	display: none;
+}
+.successWindow button{
+	margin: auto;
+}
+
+
+ 
